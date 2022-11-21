@@ -1,0 +1,231 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* root variable */
+:root {
+    --color-primary: #ff5722;
+    --color-primary-light: #ff7a50;
+    --color-secondary-light: #fff6f2;
+    --color-secondary-dark: #ffa589;
+    --color-navbar: #f8f8f8;
+    --color-headings: #000;
+    --color-body: #333;
+    --color-white: #fff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--color-body);
+    font-size: 1.4rem;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-headings);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 1.8rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+}
+
+
+/* Buttons */
+.btn {
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+    padding: 2rem 2.5rem;
+    margin: 1rem 0;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1.4rem;
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn--secondary {
+    background-color: var(--color-secondary-dark);
+    color: var(--color-white);
+}
+
+.btn--block {
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width:1024px) {
+    .btn {
+        font-size: 1.6rem;
+    }
+    .btn--block {
+        font-size: 2rem;
+    }
+}
+
+/* Badge */
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1.3rem;
+    border-radius: 32px;
+    background-color: #fff;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    direction: ltr;
+    font-family: "roboto";
+}
+
+.badge--primary {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+@media screen and (min-width:1024px) {
+    .badge {
+        font-size: 1.4rem;
+    }
+}
+
+/* List */
+.list {
+    list-style: none;
+    font-size: 1.8rem;
+}
+
+.list--inline .list__item {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.list--tick .list__item {
+    background: url(/assets/images/icons8-tick-box.svg) no-repeat;
+    background-position: right center;
+    padding-right: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width:1024px) {
+    .list--tick .list__item {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Plan */
+.block-plan {
+    display: grid;
+    gap: 2rem 4rem;
+    margin-top: 5rem;
+}
+
+.plan {
+    max-width: 400px;
+    font-size: 1.8rem;
+    transition: all 0.2s ease-out;
+}
+
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--color-white);
+    box-shadow: 0 0 20px 10px #efefef;
+}
+
+.card__header,
+.card__body {
+    padding: 3rem 2.5rem;
+}
+
+.card__header {
+    background-color: var(--color-secondary-dark);
+    color: var(--color-white);
+}
+
+.card--primary .card__header {
+    background-color: var(--color-primary-light);
+}
+
+.card--secondary .card__header {
+    background-color: var(--color-secondary-dark);
+}
+
+.plan__introduction {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.plan__price {
+    font-size: 3rem;
+}
+
+.plan__billing--cycle {
+    font-size: 1.4rem;
+}
+
+.plan__description {
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.plan .btn--block {
+    font-size: 1.6rem;
+    margin-top: 10rem;
+}
+
+.plan--popular {
+    transform: scale(1.1);
+}
+
+.plan--popular:hover {
+    transform: scale(1.15);
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media screen and (min-width:1024px) {
+    .block-plan {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .plan .btn--block {
+        font-size: 1.8rem;
+    }
+}
